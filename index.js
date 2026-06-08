@@ -3,7 +3,8 @@ const app = express()
 app.use(express.json())
 
 const pool = require("./db");
-
+const cors = require("cors");
+app.use(cors());
 
 /* rotas */
 
@@ -36,6 +37,16 @@ app.delete('/tarefas/:id' ,async (req,res)=> {
     res.json("tarefa excluida");
 })
 
+app.patch('/tarefas/:id/concluir', async (req, res) => {
+  const { id } = req.params;
+
+  const result = await pool.query(
+    "UPDATE tarefas SET concluida = true WHERE id = $1 RETURNING *",
+    [id]
+  );
+
+  res.json(result.rows[0]);
+});
 
 
 app.listen(3000)
