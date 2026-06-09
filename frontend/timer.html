@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <header class="menu">
+        <nav>
+            <div class="tarefas"></div>
+            <ul>
+                <a href="/frontend/index.html"><button class="tarefas">Tarefas <i class="bi bi-list"></i> </button></a>
+                <a href="/frontend/timer.html"><button class="timer"> Timer <i class="bi bi-clock"></i> </button></a>
+                <a href="/frontend/financas.html"><button class="finanças">Finanças <i class="bi bi-cash"></i>
+                    </button></a>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <svg width="250" height="250">
+            <circle class="bg" cx="125" cy="125" r="100"></circle>
+            <circle class="progress" cx="125" cy="125" r="100"></circle>
+        </svg>
+
+        <h1 id="timer">25:00</h1>
+    </div>
+
+    <div class="botoes">
+        <button id="start">Iniciar</button>
+        <button id="pause">Pausar</button>
+        <button id="reset">Reiniciar</button>
+    </div>
+
+    <script>
+        let tempo = 25 * 60; // 25 minutos em segundos
+        let intervalo = null;
+
+        const timer = document.getElementById("timer");
+
+        const progress = document.querySelector(".progress");
+
+        const raio = 100;
+        const circunferencia = 2 * Math.PI * raio;
+
+        progress.style.strokeDasharray = circunferencia;
+        progress.style.strokeDashoffset = 0;
+
+        const tempoInicial = 25 * 60;
+        function atualizarTela() {
+            const minutos = Math.floor(tempo / 60);
+            const segundos = tempo % 60;
+
+            timer.textContent =
+                `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+        }
+
+        function iniciar() {
+            if (intervalo) return;
+
+            intervalo = setInterval(() => {
+                tempo--;
+
+                atualizarTela();
+                atualizarBarra();
+
+                if (tempo <= 0) {
+                    clearInterval(intervalo);
+                    intervalo = null;
+                    alert("Pomodoro concluído!");
+                }
+            }, 1000);
+        }
+
+        function pausar() {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+
+        function reiniciar() {
+            pausar();
+            tempo = 25 * 60;
+            atualizarTela();
+        }
+
+        function atualizarBarra() {
+            const porcentagem = tempo / tempoInicial;
+
+            progress.style.strokeDashoffset =
+                circunferencia * (1 - porcentagem);
+        }
+
+
+        document.getElementById("start").addEventListener("click", iniciar);
+        document.getElementById("pause").addEventListener("click", pausar);
+        document.getElementById("reset").addEventListener("click", reiniciar);
+
+        atualizarTela();
+
+    </script>
+
+  
+</body>
+
+</html>

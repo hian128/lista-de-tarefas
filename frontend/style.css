@@ -5,14 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-   background: linear-gradient(to right, #074f5a, #04040b);
-    color: #e2e8f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 main {
     
@@ -35,15 +27,8 @@ input {
     outline: none;
 }
 
-button {
-    padding: 10px;
-    border: none;
-    background: linear-gradient(to right, #22b0c3, #6c5da2);
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    
-}
+
+
 button:hover {
     opacity: 0.9;
     transform: scale(1.02);
@@ -93,7 +78,7 @@ button:hover {
 :root {
   --bg: #0a0a0a;        /* fundo quase preto */
   --panel: #141414;     /* cards */
-  --panel-2: #1c1c1c;   /* variação leve */
+  --panel-2: #6d6868;   /* variação leve */
   --border: #2a2a2a;    /* linhas sutis */
 
   --text: #f5f5f5;      /* branco suave */
@@ -202,4 +187,105 @@ button:hover {
 
 .task {
   transition: all 0.2s ease;
+}
+
+.menu {
+  text-align: center;
+  background-color: var(--painel);
+  padding: 15px;
+  
+}
+
+.tarefas{
+  color: black ;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  
+}
+
+.timer {
+  color: black ;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.finanças{
+  color: black ;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+
+.container{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 50px auto;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+#timer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 40px;
+}
+
+.bg{
+    fill: none;
+    stroke: #333;
+    stroke-width: 12;
+}
+
+.progress{
+    fill: none;
+    stroke: #4f5155;
+    stroke-width: 12;
+    stroke-linecap: round;
+}
+
+.botoes{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#start{
+
+  color: black ;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  border-radius: 15%;
+  
+  
+
+}
+
+#pause{
+  color: black ;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  border-radius: 15%;
+  
+}
+
+#reset{
+  color: black ;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  border-radius: 15%;
 }

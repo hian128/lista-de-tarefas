@@ -1,8 +1,10 @@
+/* quando abrir carregar funçao de listar tarefas   */
 window.onload = () => {
   listarTarefas();
 };
 let todasTarefas = [];
 
+/* acessa a rota na api e busca tarefas dando a resposta em json */
 async function listarTarefas() {
   const res = await fetch("http://localhost:3000/tarefas");
   todasTarefas = await res.json();
@@ -12,7 +14,7 @@ async function listarTarefas() {
   renderizarTarefas(todasTarefas);
 }
   
-
+/* funçao de criar tarefa , le o input que o usuario digitar verifica se nao e vazio  */
 async function criarTarefa() {
   const input = document.getElementById("tarefaInput");
 
@@ -33,6 +35,7 @@ async function criarTarefa() {
   atualizarContador();
 }
 
+/* funçao para deletar tarefas passando id e acessando api por meio do metodo delete  */
 async function deletarTarefa(id) {
   await fetch(`http://localhost:3000/tarefas/${id}`, {
     method: "DELETE"
@@ -42,6 +45,7 @@ async function deletarTarefa(id) {
   atualizarContador();
 }
 
+/* funçao concluir atualiza a tarefa e marca como concluido = true  */
 async function concluirTarefa(id) {
   await fetch(`http://localhost:3000/tarefas/${id}/concluir`, {
     method: "PATCH"
