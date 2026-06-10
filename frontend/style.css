@@ -1,90 +1,97 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 
 main {
-    
-    width: 400px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .titulo {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 input {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
 }
 
 
 
 button:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 .filtro {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
 .filtro button {
-    flex: 1;
-    margin: 0 3px;
-    background: #e5e7eb;
-    color: black;
+  flex: 1;
+  margin: 0 3px;
+  background: #e5e7eb;
+  color: black;
 }
 
 .task {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background: #334155;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 10px;
+  background: #334155;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .task-text {
-    color: #e2e8f0;
+  color: #e2e8f0;
 }
 
 .task-actions button {
-    margin-left: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+  margin-left: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .task.done .task-text {
-    text-decoration: line-through;
-    opacity: 0.6;
+  text-decoration: line-through;
+  opacity: 0.6;
 }
 
 :root {
-  --bg: #0a0a0a;        /* fundo quase preto */
-  --panel: #141414;     /* cards */
-  --panel-2: #6d6868;   /* variação leve */
-  --border: #2a2a2a;    /* linhas sutis */
+  --bg: #0a0a0a;
+  /* fundo quase preto */
+  --panel: #141414;
+  /* cards */
+  --panel-2: #6d6868;
+  /* variação leve */
+  --border: #2a2a2a;
+  /* linhas sutis */
 
-  --text: #f5f5f5;      /* branco suave */
-  --muted: #a3a3a3;     /* cinza elegante */
+  --text: #f5f5f5;
+  /* branco suave */
+  --muted: #a3a3a3;
+  /* cinza elegante */
 
-  --accent: #ffffff;    /* destaque minimalista */
+  --accent: #ffffff;
+  /* destaque minimalista */
 }
 
 body {
@@ -182,7 +189,8 @@ button:hover {
 
 .task.concluida .task-text {
   text-decoration: line-through;
-  color: #9ca3af; /* cinza suave */
+  color: #9ca3af;
+  /* cinza suave */
 }
 
 .task {
@@ -193,99 +201,156 @@ button:hover {
   text-align: center;
   background-color: var(--painel);
   padding: 15px;
-  
+
 }
 
-.tarefas{
-  color: black ;
+.tarefas {
+  color: black;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
-  
+
 }
 
 .timer {
-  color: black ;
+  color: black;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
 }
 
-.finanças{
-  color: black ;
+.finanças {
+  color: black;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
 }
 
 
-.container{
-    position: relative;
-    width: 250px;
-    height: 250px;
-    margin: 50px auto;
+.container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 50px auto;
 }
 
-svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(-90deg);
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
 }
 
-#timer{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: white;
-    font-size: 40px;
+#timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  font-size: 40px;
 }
 
-.bg{
-    fill: none;
-    stroke: #333;
-    stroke-width: 12;
+.bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 12;
 }
 
-.progress{
-    fill: none;
-    stroke: #4f5155;
-    stroke-width: 12;
-    stroke-linecap: round;
+.progress {
+  fill: none;
+  stroke: #4f5155;
+  stroke-width: 12;
+  stroke-linecap: round;
 }
 
-.botoes{
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#start{
-
-  color: black ;
-  background-color: white;
+.botoes {
+  text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  border-radius: 15%;
-  
-  
-
 }
 
-#pause{
-  color: black ;
+#start {
+
+  color: black;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   border-radius: 15%;
-  
+
+
+
 }
 
-#reset{
-  color: black ;
+#pause {
+  color: black;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   border-radius: 15%;
+
+}
+
+#reset {
+  color: black;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  border-radius: 15%;
+}
+
+.titu {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+
+.m {
+  width: 1400px;
+  padding: 20px;
+  border-radius: 12px;
+
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.campos {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+
+#descricao {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 300px;
+}
+
+#data {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+}
+
+#valor {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+}
+
+#tipo{
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  
 }

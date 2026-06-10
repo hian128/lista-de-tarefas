@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt=br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,55 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    
-     <header class="menu">
+
+    <header class="menu">
         <nav>
             <div class="tarefas"></div>
             <ul>
                 <a href="/frontend/index.html"><button class="tarefas">Tarefas <i class="bi bi-list"></i> </button></a>
                 <a href="/frontend/timer.html"><button class="timer"> Timer <i class="bi bi-clock"></i> </button></a>
-                <a href="/frontend/financas.html"><button  class="finanças">Finanças <i class="bi bi-cash"></i> </button></a>
-                
+                <a href="/frontend/financas.html"><button class="finanças">Finanças <i class="bi bi-cash"></i>
+                    </button></a>
+
             </ul>
         </nav>
     </header>
-    
+   <main class="m">
+    <header>
+        <h1 class="titu">Finanças</h1>
+    </header>
+
+    <div class="campos">
+
+        <div class="campo">
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao" id="descricao">
+        </div>
+
+        <div class="campo">
+            <label for="data">Data</label>
+            <input type="date" name="data" id="data">
+        </div>
+
+        <div class="campo">
+            <label for="valor">Valor R$</label>
+            <input type="number" name="valor" id="valor" step="0.01" min="0">
+        </div>
+
+        <div class="campo">
+            <label for="tipo">Tipo</label>
+            <select name="tipo" id="tipo">
+                <option value="Gasto">Gasto</option>
+                <option value="Ganho">Ganho</option>
+            </select>
+        </div>
+
+        <button class="adicionar">Adicionar</button>
+
+    </div>
+</main>
 </body>
+
 </html>
